@@ -4,6 +4,8 @@ orbs:
 workflows:
   e2e:
     jobs:
-      - cypress/run-tests:
+      - attach_workspace:
+        at: ~/
+      - cypress/run:
           name: Cypress E2E tests
           cypress-command: 'npx cypress run --record'
