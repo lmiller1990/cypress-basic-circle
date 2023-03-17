@@ -1,0 +1,12 @@
+version: 2.1
+orbs:
+  # import Cypress orb by specifying an exact version x.y.z
+  # or the latest version 1.x.x using "@1" syntax
+  # https://github.com/cypress-io/circleci-orb
+  cypress: cypress-io/cypress@3
+workflows:
+  e2e:
+    jobs:
+      - cypress/run:
+          name: Cypress CT tests
+          cypress-command: 'cd packages/frontend && npx cypress run --record --component'
