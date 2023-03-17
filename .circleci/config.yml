@@ -9,4 +9,4 @@ workflows:
     jobs:
       - cypress/run:
           name: Cypress CT tests
-          cypress-command: 'cd packages/frontend && npx cypress run --record --component'
+          cypress-command: 'npx cypress run --record'
